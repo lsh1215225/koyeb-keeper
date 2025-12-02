@@ -21,11 +21,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r koyeb-alive/requirements.txt
+        pip install -r requirements.txt
     
     - name: Run Koyeb alive script
       env:
         KOYEB_LOGIN: ${{ secrets.KOYEB_LOGIN }}
         TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
         TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
-      run: python koyeb-alive/koyeb-alive.py
+      run: python koyeb-keeper.py
